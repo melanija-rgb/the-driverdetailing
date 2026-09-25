@@ -76,13 +76,17 @@ if ("IntersectionObserver" in window && reveals.length) {
 const dialog = document.querySelector(".lightbox");
 const lightboxImg = dialog ? dialog.querySelector("img") : null;
 const lightboxCaption = dialog ? dialog.querySelector("figcaption") : null;
-const galleryItems = [...document.querySelectorAll(".gallery__item")];
+let activeItems = [];
 let galleryIndex = 0;
 
+function visibleItems(scope) {
+  return [...scope.querySelectorAll(".gallery__item")].filter((item) => !item.closest(".is-hidden"));
+}
+
 function showGallery(index) {
-  if (!dialog || !galleryItems.length) return;
-  galleryIndex = (index + galleryItems.length) % galleryItems.length;
-  const item = galleryItems[galleryIndex];
+  if (!dialog || !activeItems.length) return;
+  galleryIndex = (index + activeItems.length) % activeItems.length;
+  const item = activeItems[galleryIndex];
   const image = item.querySelector("img");
   lightboxImg.src = item.dataset.full || image.src;
   lightboxImg.alt = image.alt;
@@ -90,9 +94,39 @@ function showGallery(index) {
   if (!dialog.open) dialog.showModal();
 }
 
-galleryItems.forEach((item, index) => {
-  item.addEventListener("click", () => showGallery(index));
+document.addEventListener("click", (event) => {
+  const item = event.target.closest(".gallery__item");
+  if (!item || item.closest(".is-hidden")) return;
+  const scope = item.closest("[data-lightbox]") || document;
+  activeItems = visibleItems(scope);
+  const index = activeItems.indexOf(item);
+  if (index >= 0) showGallery(index);
 });
+
+const filterBar = document.querySelector(".filters");
+
+if (filterBar) {
+  filterBar.addEventListener("click", (event) => {
+    const button = event.target.closest("[data-filter]");
+    if (!button) return;
+    const filter = button.dataset.filter;
+
+    filterBar.querySelectorAll("[data-filter]").forEach((item) => {
+      const active = item === button;
+      item.classList.toggle("is-active", active);
+      item.setAttribute("aria-pressed", active ? "true" : "false");
+    });
+
+    document.querySelectorAll(".project__block").forEach((block) => {
+      const cats = (block.dataset.cat || "").split(/\s+/);
+      block.classList.toggle("is-hidden", filter !== "sve" && !cats.includes(filter));
+    });
+
+    document.querySelectorAll(".project").forEach((project) => {
+      project.classList.toggle("is-hidden", !project.querySelector(".project__block:not(.is-hidden)"));
+    });
+  });
+}
 
 if (dialog) {
   dialog.querySelector(".lightbox__close").addEventListener("click", () => dialog.close());
@@ -123,7 +157,7 @@ if (form) {
   form.querySelectorAll("input, select, textarea").forEach((field) => {
     field.addEventListener("invalid", () => {
       if (field.validity.valueMissing) field.setCustomValidity("Popunite ovo polje.");
-      else if (field.validity.typeMismatch) field.setCustomValidity("Unesite ispravnu e-mail adresu.");
+      else if (field.validity.typeMismatch) field.setCustomValidity("Provjerite uneseni podatak.");
       else field.setCustomValidity("");
     });
     field.addEventListener("input", () => field.setCustomValidity(""));

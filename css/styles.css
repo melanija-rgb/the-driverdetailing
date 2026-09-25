@@ -234,8 +234,9 @@ ul {
 }
 
 .logo__mark {
-  width: 42px;
-  height: 42px;
+  width: 52px;
+  height: 52px;
+  object-fit: contain;
   flex: 0 0 auto;
 }
 
@@ -520,10 +521,16 @@ ul {
   background: #000;
 }
 
-.ba img {
+.ba img,
+.ba .gallery__item img {
   width: 100%;
-  height: clamp(240px, 42vw, 520px);
+  height: auto;
+  aspect-ratio: 1 / 1.04;
   object-fit: cover;
+}
+
+.ba .gallery__item {
+  margin: 0;
 }
 
 .ba figcaption {
@@ -631,6 +638,130 @@ ul {
 .gallery__item:hover::after,
 .gallery__item:focus-visible::after {
   transform: translate(-50%, -50%);
+}
+
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.filters button {
+  min-height: 44px;
+  padding: 0 14px;
+  border: 1px solid var(--line);
+  background: transparent;
+  color: var(--metal);
+  font-family: var(--font-display);
+  font-size: 0.78rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.filters button.is-active,
+.filters button:hover,
+.filters button:focus-visible {
+  border-color: var(--red);
+  color: #fff;
+}
+
+.project {
+  padding: 32px 0 8px;
+  border-top: 1px solid var(--line);
+}
+
+.project__title {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: clamp(1.45rem, 2.6vw, 2rem);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  line-height: 1.05;
+}
+
+.project__block + .project__block {
+  margin-top: 36px;
+}
+
+.project__kicker {
+  margin-top: 10px;
+  color: var(--red);
+  font-family: var(--font-display);
+  font-size: 0.75rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.project__text,
+.project__note {
+  margin-top: 12px;
+  max-width: 72ch;
+  color: var(--text-soft);
+}
+
+.project__note {
+  color: var(--metal);
+  font-size: 0.92rem;
+}
+
+.project__list {
+  margin: 14px 0 0;
+  display: grid;
+  gap: 7px 28px;
+  color: #d0d0d0;
+  font-size: 0.95rem;
+}
+
+.project__list li {
+  position: relative;
+  padding-left: 14px;
+}
+
+.project__list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.65em;
+  width: 7px;
+  height: 1px;
+  background: var(--red);
+}
+
+.project__photos {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.project__photos .gallery__item {
+  margin: 0;
+}
+
+.is-compare::after {
+  content: "Prije / poslije";
+  top: auto;
+  right: auto;
+  bottom: 12px;
+  left: 12px;
+  transform: none;
+  opacity: 1;
+  padding: 6px 10px;
+  background: rgba(11, 11, 11, 0.72);
+  font-size: 0.75rem;
+  letter-spacing: 0.14em;
+}
+
+.is-compare:hover::after,
+.is-compare:focus-visible::after {
+  transform: none;
+  opacity: 1;
+}
+
+.is-hidden {
+  display: none;
 }
 
 .lightbox {
@@ -777,7 +908,7 @@ body:has(.lightbox[open]) .mobile-bar {
   height: 100%;
   max-height: 640px;
   object-fit: cover;
-  aspect-ratio: 4 / 5;
+  aspect-ratio: 5 / 4;
 }
 
 /* =========================================================
@@ -824,8 +955,7 @@ body:has(.lightbox[open]) .mobile-bar {
 
 /* =========================================================
    12. Kontakt
-   Telefon, adresa i radno vrijeme: profil lokala.
-   E-mail je placeholder — zamijenite unesite@domen.ba
+   Telefon, adresa, Instagram i radno vrijeme.
    ========================================================= */
 
 .contact__grid {
@@ -1142,8 +1272,8 @@ body:has(.lightbox[open]) .mobile-bar {
   }
 
   .logo__mark {
-    width: 36px;
-    height: 36px;
+    width: 42px;
+    height: 42px;
   }
 }
 
@@ -1262,6 +1392,18 @@ body:has(.lightbox[open]) .mobile-bar {
 
   .gallery {
     columns: 2;
+  }
+
+  .project__list {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .project__photos {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .span-all {
+    grid-column: 1 / -1;
   }
 
   .footer__grid {

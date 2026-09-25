@@ -11,20 +11,13 @@
   <meta property="og:title" content="Driver's Detailing | Profesionalni auto detailing u Banjoj Luci">
   <meta property="og:description" content="Profesionalno auto poliranje, detailing, dubinsko čišćenje i zaštita vozila u Banjoj Luci.">
   <meta property="og:url" content="https://the-driverdetailing.netlify.app/">
-  <meta property="og:image" content="https://the-driverdetailing.netlify.app/images/hero.jpg">
+  <meta property="og:image" content="https://the-driverdetailing.netlify.app/images/detailing/bmw-5.png">
   <meta name="twitter:card" content="summary_large_image">
-  <link rel="icon" href="images/logo.svg" type="image/svg+xml">
+  <link rel="icon" href="images/detailing/logo.jpg" type="image/jpeg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Oswald:wght@500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
-  <!--
-    ZAMJENE
-    E-mail je placeholder: unesite@domen.ba
-    Fotografije su u folderu images/. Zadržite ista imena fajlova.
-    Prije/poslije: before.jpg i after.jpg
-    Galerija: gallery-1.jpg do gallery-8.jpg — kopirajte figure.gallery__item za novu fotografiju.
-  -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -62,7 +55,7 @@
 
   <header class="site-header">
     <a class="logo" href="#pocetna">
-      <img class="logo__mark" src="images/logo.svg" alt="">
+      <img class="logo__mark" src="images/detailing/logo.jpg" alt="">
       <span class="logo__name">
         <span>Driver's</span>
         <span>Detailing</span>
@@ -83,7 +76,7 @@
 
   <main id="sadrzaj">
     <section class="hero" id="pocetna">
-      <img class="hero__bg" src="images/hero.jpg" alt="Sivi sportski automobil sa sjajnim, njegovanim lakom" fetchpriority="high">
+      <img class="hero__bg" src="images/detailing/bmw-5.png" alt="Safirno crni BMW serije 5 G60 u studiju Driver's Detailing, nakon korekcije laka" width="740" height="575" fetchpriority="high">
       <div class="hero__overlay"></div>
       <div class="hero__content">
         <h1>Vaš automobil.<br>Naša preciznost<span>.</span></h1>
@@ -139,19 +132,24 @@
       <div class="container container--wide">
         <div class="section__head reveal">
           <h2 class="section__title">Prije → poslije</h2>
+          <p class="section__lead">Audi A3, svijetli bež enterijer.</p>
         </div>
-        <div class="ba reveal">
+        <div class="ba reveal" data-lightbox>
           <figure>
-            <img src="images/before.jpg" alt="Tamni automobil na zemljanom putu, prije detaljne njege" width="1600" height="2000">
+            <button class="gallery__item" type="button" data-full="images/detailing/audi-a3-prije.png" data-caption="Audi A3, sjedište prije čišćenja">
+              <img src="images/detailing/audi-a3-prije.png" alt="Svijetlo bež sjedište Audi A3 prije čišćenja, sa mrljama na sjedalu" width="805" height="838">
+            </button>
             <figcaption>Prije</figcaption>
           </figure>
           <div class="ba__mark" aria-hidden="true">→</div>
           <figure>
-            <img src="images/after.jpg" alt="Žuti sportski automobil sa izraženim sjajem laka, poslije njege" width="1400" height="1750">
+            <button class="gallery__item" type="button" data-full="images/detailing/audi-a3-poslije.png" data-caption="Audi A3, sjedište poslije čišćenja">
+              <img src="images/detailing/audi-a3-poslije.png" alt="Svijetlo bež sjedište Audi A3 poslije čišćenja, ujednačena tkanina bez mrlja" width="776" height="834">
+            </button>
             <figcaption>Poslije</figcaption>
           </figure>
         </div>
-        <p class="ba__note reveal">Detalj po detalj. Razlika koja se vidi.</p>
+        <p class="ba__note reveal">Svijetli bež enterijer u očajnom stanju. Za nas samo još jedan ponedjeljak. Auto restartovano na max.</p>
       </div>
     </section>
 
@@ -161,31 +159,210 @@
           <h2 class="section__title">Naši radovi</h2>
           <p class="section__lead">Pogledajte neke od vozila kojima smo vratili sjaj.</p>
         </div>
-        <div class="gallery reveal">
-          <button class="gallery__item" type="button" data-full="images/gallery-1.jpg" data-caption="Crveni kupe, sjaj laka">
-            <img src="images/gallery-1.jpg" alt="Crveni kupe sa dubokim odsjajem na haubi" width="1600" height="1067">
-          </button>
-          <button class="gallery__item" type="button" data-full="images/gallery-2.jpg" data-caption="Bijeli kupe u večernjem svjetlu">
-            <img src="images/gallery-2.jpg" alt="Bijeli Audi kupe na putu iznad planina" width="1600" height="2000">
-          </button>
-          <button class="gallery__item" type="button" data-full="images/gallery-3.jpg" data-caption="Sportski automobil, odsjaj na haubi">
-            <img src="images/gallery-3.jpg" alt="Narandžasti sportski automobil sa odsjajem drveća na haubi" width="1400" height="1750">
-          </button>
-          <button class="gallery__item" type="button" data-full="images/gallery-4.jpg" data-caption="Tamni Porsche">
-            <img src="images/gallery-4.jpg" alt="Tamni Porsche sa čistim linijama karoserije" width="2000" height="1333">
-          </button>
-          <button class="gallery__item" type="button" data-full="images/gallery-5.jpg" data-caption="Plavi kupe">
-            <img src="images/gallery-5.jpg" alt="Plavi kupe sa njegovanim lakom" width="1600" height="1067">
-          </button>
-          <button class="gallery__item" type="button" data-full="images/gallery-6.jpg" data-caption="Bijeli BMW">
-            <img src="images/gallery-6.jpg" alt="Bijeli BMW u vožnji, čist lak" width="1600" height="1067">
-          </button>
-          <button class="gallery__item" type="button" data-full="images/gallery-7.jpg" data-caption="Detalj zadnjeg dijela">
-            <img src="images/gallery-7.jpg" alt="Zadnji dio tamnog Porschea, čiste linije i svjetla" width="1200" height="1600">
-          </button>
-          <button class="gallery__item" type="button" data-full="images/gallery-8.jpg" data-caption="Žuti sportski automobil">
-            <img src="images/gallery-8.jpg" alt="Žuti Mercedes sa sjajnim lakom na otvorenom putu" width="1400" height="1750">
-          </button>
+        <div class="filters" role="group" aria-label="Filtriraj radove">
+          <button type="button" class="is-active" data-filter="sve" aria-pressed="true">Svi</button>
+          <button type="button" data-filter="eksterijer" aria-pressed="false">Eksterijer</button>
+          <button type="button" data-filter="enterijer" aria-pressed="false">Enterijer</button>
+          <button type="button" data-filter="poliranje" aria-pressed="false">Poliranje</button>
+          <button type="button" data-filter="zastita" aria-pressed="false">Zaštita</button>
+          <button type="button" data-filter="motori" aria-pressed="false">Motori</button>
+        </div>
+        <div class="projects" data-lightbox>
+          <article class="project">
+            <h3 class="project__title">Volvo XC60 2019</h3>
+            <div class="project__block" data-cat="eksterijer enterijer">
+              <p class="project__kicker">Eksterijer · Enterijer</p>
+              <p class="project__text">Kvalitetni materijali, premium izrada, odličan dizajn, to su atributi koji krase unutrašnjost ovog Volva, i svjedoče zašto on pripada premium klasi. Naravno tu je trebala naša ruka da dovede ovaj zapušteni enterijer do savršenstva.</p>
+              <p class="project__note">Na fotografiji je eksterijer vozila. Rad opisan ispod urađen je u enterijeru.</p>
+              <ul class="project__list">
+                <li>čišćenje uvala/okvira/kedera vrata, gepeka</li>
+                <li>čišćenje kanalica panorame</li>
+                <li>čišćenje krova/neba</li>
+                <li>čišćenje A/B/C stubova</li>
+                <li>čišćenje sigurnosnih pojaseva</li>
+                <li>čišćenje sjedišta</li>
+                <li>čišćenje šina ispod sjedišta</li>
+                <li>čišćenje i njega svih kožnih površina</li>
+                <li>čišćenje poda ekstrakcijom</li>
+                <li>čišćenje i impregnacija svih gumenih/plastičnih površina (tabla, vrata, okviri)</li>
+                <li>čišćenje svih staklenih površina (prozori, šajbe, ekrani)</li>
+                <li>čišćenje gepeka i skrivenih ostava ispod, i još mnogo detalja</li>
+              </ul>
+              <div class="project__photos">
+                <button class="gallery__item span-all" type="button" data-full="images/detailing/volvo-xc60.png" data-caption="Volvo XC60 2019, eksterijer. Rad je urađen u enterijeru.">
+                  <img src="images/detailing/volvo-xc60.png" alt="Plavi Volvo XC60 2019 u studiju, nakon njege" width="749" height="593" loading="lazy">
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <article class="project">
+            <h3 class="project__title">VW Golf 8.5 R-Line</h3>
+            <div class="project__block" data-cat="eksterijer poliranje zastita">
+              <p class="project__kicker">Eksterijer · Poliranje · Zaštita</p>
+              <p class="project__text">Ovaj prelijepi Golf sa nekih 1000 km na satu došao je u naš studio na tretman ditejlinga i da na vrijeme zaštiti lak.</p>
+              <ul class="project__list">
+                <li>premium vanjsko pranje</li>
+                <li>hemijska i fizička dekontaminacija</li>
+                <li>stage 1</li>
+                <li>keramička zaštita laka do 12 mjeseci</li>
+              </ul>
+              <div class="project__photos">
+                <button class="gallery__item span-all" type="button" data-full="images/detailing/golf-8-rline.png" data-caption="VW Golf 8.5 R-Line, stage 1 i keramička zaštita do 12 mjeseci">
+                  <img src="images/detailing/golf-8-rline.png" alt="Bijeli VW Golf 8.5 R-Line u studiju, nakon stage 1 poliranja" width="771" height="637" loading="lazy">
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <article class="project">
+            <h3 class="project__title">Audi A6 C8 Avant</h3>
+            <div class="project__block" data-cat="eksterijer poliranje zastita">
+              <p class="project__kicker">Eksterijer · Poliranje · Zaštita</p>
+              <p class="project__text">Gospodar prstenova u avant izvedbi stigao je u našu garažu na najjači stepen poliranja. Naravno, na kraju smo uradili zaštitu kao šlag na tortu.</p>
+              <ul class="project__list">
+                <li>premium vanjsko pranje</li>
+                <li>hemijska i fizička dekontaminacija</li>
+                <li>multistage poliranje</li>
+                <li>keramička zaštita laka do 24 mjeseca</li>
+              </ul>
+              <div class="project__photos">
+                <button class="gallery__item span-all" type="button" data-full="images/detailing/audi-a6-c8.png" data-caption="Audi A6 C8 Avant, multistage poliranje i keramička zaštita do 24 mjeseca">
+                  <img src="images/detailing/audi-a6-c8.png" alt="Crni Audi A6 C8 Avant u studiju, nakon multistage poliranja" width="743" height="627" loading="lazy">
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <article class="project">
+            <h3 class="project__title">BMW serije 5 G60</h3>
+            <div class="project__block" data-cat="eksterijer poliranje zastita">
+              <p class="project__kicker">Eksterijer · Poliranje · Zaštita</p>
+              <p class="project__text">Iako je dizajn nove petice na početku bio kontraverzan, vremenom postaje zreliji, pogotovo izgleda impozantno sa M opremom u ovoj safirno crnoj boji. Na eksterijeru je urađena ozbiljna korekcija laka i poliranje felni. Takođe je urađena i keramička zaštita lakiranih površina.</p>
+              <ul class="project__list">
+                <li>premium vanjsko pranje</li>
+                <li>hemijska i fizička dekontaminacija</li>
+                <li>stage 2 poliranje</li>
+                <li>keramička zaštita laka do 24 mjeseca</li>
+                <li>poliranje felni</li>
+              </ul>
+              <div class="project__photos">
+                <button class="gallery__item span-all" type="button" data-full="images/detailing/bmw-5.png" data-caption="BMW serije 5 G60, stage 2, poliranje felni i keramička zaštita do 24 mjeseca">
+                  <img src="images/detailing/bmw-5.png" alt="Safirno crni BMW serije 5 G60 sa M opremom, nakon korekcije laka" width="740" height="575" loading="lazy">
+                </button>
+              </div>
+            </div>
+            <div class="project__block" data-cat="enterijer">
+              <p class="project__kicker">Enterijer</p>
+              <p class="project__text">Ova luksuzna bavarska limuzina došla je na kompletan tretman čišćenja i poliranja. U ovoj objavi se fokusiramo na enterijer i motorni prostor.</p>
+              <ul class="project__list">
+                <li>čišćenje uvala/okvira/kedera vrata, gepeka</li>
+                <li>čišćenje krova/neba</li>
+                <li>čišćenje A/B/C stubova</li>
+                <li>čišćenje sigurnosnih pojaseva</li>
+                <li>čišćenje i ekstrakcija sjedišta</li>
+                <li>čišćenje šina ispod sjedišta</li>
+                <li>čišćenje i njega svih kožnih površina</li>
+                <li>čišćenje poda ekstrakcijom</li>
+                <li>čišćenje i impregnacija svih gumenih/plastičnih površina (tabla, vrata, okviri)</li>
+                <li>čišćenje svih staklenih površina (prozori, šajbe, ekrani)</li>
+                <li>čišćenje gepeka i skrivenih ostava ispod, i još mnogo detalja</li>
+              </ul>
+              <div class="project__photos">
+                <button class="gallery__item" type="button" data-full="images/detailing/bmw-5-enterijer-1.png" data-caption="BMW serije 5 G60, enterijer">
+                  <img src="images/detailing/bmw-5-enterijer-1.png" alt="Enterijer BMW serije 5 G60 nakon čišćenja" width="825" height="813" loading="lazy">
+                </button>
+                <button class="gallery__item" type="button" data-full="images/detailing/bmw-5-enterijer-2.png" data-caption="BMW serije 5 G60, vozačko mjesto">
+                  <img src="images/detailing/bmw-5-enterijer-2.png" alt="Vozačko mjesto BMW serije 5 G60 nakon čišćenja" width="781" height="741" loading="lazy">
+                </button>
+                <button class="gallery__item" type="button" data-full="images/detailing/bmw-5-enterijer-3.png" data-caption="BMW serije 5 G60, vozačko mjesto">
+                  <img src="images/detailing/bmw-5-enterijer-3.png" alt="Vozačko mjesto BMW serije 5 G60, vrata otvorena" width="766" height="767" loading="lazy">
+                </button>
+                <button class="gallery__item" type="button" data-full="images/detailing/bmw-5-pod.png" data-caption="BMW serije 5 G60, pod i patosnice">
+                  <img src="images/detailing/bmw-5-pod.png" alt="Očišćen pod i patosnice BMW serije 5 G60" width="775" height="796" loading="lazy">
+                </button>
+                <button class="gallery__item span-all is-compare" type="button" data-full="images/detailing/bmw-5-prije-poslije-pojas.png" data-caption="BMW serije 5 G60, prije i poslije: pojas i pod">
+                  <img src="images/detailing/bmw-5-prije-poslije-pojas.png" alt="Prije i poslije: pojas i pod BMW serije 5 G60" width="781" height="754" loading="lazy">
+                </button>
+                <button class="gallery__item span-all is-compare" type="button" data-full="images/detailing/bmw-5-prije-poslije-poklopac.png" data-caption="BMW serije 5 G60, prije i poslije: plastični poklopac">
+                  <img src="images/detailing/bmw-5-prije-poslije-poklopac.png" alt="Prije i poslije: plastični poklopac u enterijeru BMW serije 5 G60" width="780" height="725" loading="lazy">
+                </button>
+                <button class="gallery__item span-all is-compare" type="button" data-full="images/detailing/bmw-5-prije-poslije-tepih.png" data-caption="BMW serije 5 G60, prije i poslije: tepih">
+                  <img src="images/detailing/bmw-5-prije-poslije-tepih.png" alt="Prije i poslije: tepih BMW serije 5 G60" width="791" height="779" loading="lazy">
+                </button>
+              </div>
+            </div>
+            <div class="project__block" data-cat="motori">
+              <p class="project__kicker">Motori</p>
+              <p class="project__text">Ditejling motornog prostora.</p>
+              <div class="project__photos">
+                <button class="gallery__item span-all is-compare" type="button" data-full="images/detailing/bmw-5-motor-prije-poslije.png" data-caption="BMW serije 5 G60, prije i poslije: motorni prostor">
+                  <img src="images/detailing/bmw-5-motor-prije-poslije.png" alt="Prije i poslije: plastika motornog prostora BMW serije 5 G60" width="775" height="846" loading="lazy">
+                </button>
+                <button class="gallery__item" type="button" data-full="images/detailing/bmw-5-motor-1.png" data-caption="BMW serije 5 G60, motorni prostor">
+                  <img src="images/detailing/bmw-5-motor-1.png" alt="Očišćen motorni prostor BMW serije 5 G60" width="768" height="843" loading="lazy">
+                </button>
+                <button class="gallery__item" type="button" data-full="images/detailing/bmw-5-motor-2.png" data-caption="BMW serije 5 G60, detalj motora">
+                  <img src="images/detailing/bmw-5-motor-2.png" alt="Detalj očišćenog motornog prostora BMW serije 5 G60" width="789" height="838" loading="lazy">
+                </button>
+                <button class="gallery__item" type="button" data-full="images/detailing/bmw-5-motor-3.png" data-caption="BMW serije 5 G60, detalj motora">
+                  <img src="images/detailing/bmw-5-motor-3.png" alt="Detalj motornog prostora BMW serije 5 G60 nakon ditejlinga" width="787" height="831" loading="lazy">
+                </button>
+                <button class="gallery__item" type="button" data-full="images/detailing/bmw-5-motor-4.png" data-caption="BMW serije 5 G60, motorni prostor">
+                  <img src="images/detailing/bmw-5-motor-4.png" alt="Motorni prostor BMW serije 5 G60 nakon čišćenja" width="782" height="837" loading="lazy">
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <article class="project">
+            <h3 class="project__title">Suzuki Bandit</h3>
+            <div class="project__block" data-cat="eksterijer poliranje zastita">
+              <p class="project__kicker">Eksterijer · Poliranje · Zaštita</p>
+              <p class="project__text">Sezona dvotočkaša polako počinje. Ovaj klijent je odlučio da svoju zvijerku sredi na vrijeme, te uz keramičku zaštitu nema brige tokom pranja i održavanja.</p>
+              <ul class="project__list">
+                <li>premium vanjsko pranje</li>
+                <li>hemijska i fizička dekontaminacija</li>
+                <li>višestepeno poliranje</li>
+                <li>keramička zaštita do 2 godine</li>
+              </ul>
+              <div class="project__photos">
+                <button class="gallery__item span-all" type="button" data-full="images/detailing/suzuki-bandit.png" data-caption="Suzuki Bandit, višestepeno poliranje i keramička zaštita do 2 godine">
+                  <img src="images/detailing/suzuki-bandit.png" alt="Suzuki Bandit u studiju, nakon poliranja i keramičke zaštite" width="809" height="819" loading="lazy">
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <article class="project">
+            <h3 class="project__title">Audi A3</h3>
+            <div class="project__block" data-cat="enterijer">
+              <p class="project__kicker">Enterijer</p>
+              <p class="project__text">Svijetli bež enterijer u očajnom stanju, za mnoge jako težak posao za uraditi. Za nas samo još jedan ponedjeljak. Auto restartovano na max, uradili sljedeće:</p>
+              <ul class="project__list">
+                <li>čišćenje uvala/okvira/kedera vrata, gepeka</li>
+                <li>čišćenje krova/neba</li>
+                <li>čišćenje A/B/C stubova</li>
+                <li>čišćenje sigurnosnih pojaseva</li>
+                <li>čišćenje i ekstrakcija sjedišta</li>
+                <li>čišćenje šina ispod sjedišta</li>
+                <li>čišćenje i njega svih kožnih površina</li>
+                <li>čišćenje poda ekstrakcijom</li>
+                <li>čišćenje i impregnacija svih gumenih/plastičnih površina (tabla, vrata, okviri)</li>
+                <li>čišćenje svih staklenih površina (prozori, šajbe, ekrani)</li>
+                <li>čišćenje gepeka i skrivenih ostava ispod, i još mnogo detalja</li>
+                <li>mašinsko sušenje</li>
+              </ul>
+              <div class="project__photos">
+                <button class="gallery__item" type="button" data-full="images/detailing/audi-a3-prije.png" data-caption="Audi A3, prije">
+                  <img src="images/detailing/audi-a3-prije.png" alt="Sjedište Audi A3 prije čišćenja" width="805" height="838" loading="lazy">
+                </button>
+                <button class="gallery__item" type="button" data-full="images/detailing/audi-a3-poslije.png" data-caption="Audi A3, poslije">
+                  <img src="images/detailing/audi-a3-poslije.png" alt="Sjedište Audi A3 poslije čišćenja" width="776" height="834" loading="lazy">
+                </button>
+              </div>
+            </div>
+          </article>
         </div>
       </div>
     </section>
@@ -228,14 +405,14 @@
             <p>Automobili su nam i posao i navika. Ako vam je vozilo bitno, tu smo da mu vratimo izgled i da ga zaštitimo za svakodnevnu vožnju.</p>
           </div>
           <figure class="about__media reveal">
-            <img src="images/about.jpg" alt="Pranje i priprema sportskog automobila u studiju" width="1600" height="900">
+            <img src="images/detailing/volvo-xc60.png" alt="Plavi Volvo XC60 u studiju Driver's Detailing" width="749" height="593">
           </figure>
         </div>
       </div>
     </section>
 
     <section class="cta" aria-labelledby="cta-naslov">
-      <img class="cta__bg" src="images/cta.jpg" alt="Crveni automobil sa dubokim sjajem laka">
+      <img class="cta__bg" src="images/detailing/audi-a6-c8.png" alt="Crni Audi A6 C8 Avant nakon poliranja" width="743" height="627">
       <div class="cta__overlay"></div>
       <div class="cta__content reveal">
         <h2 id="cta-naslov">Vaš automobil zaslužuje više od običnog pranja.</h2>
@@ -264,13 +441,6 @@
                 <div>
                   <span>Telefon</span>
                   <a href="tel:+38766281073">066 281-073</a>
-                </div>
-              </li>
-              <li>
-                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16v12H4z"/><path d="M4 7l8 6 8-6"/></svg>
-                <div>
-                  <span>E-mail</span>
-                  <a href="mailto:unesite@domen.ba">unesite@domen.ba</a>
                 </div>
               </li>
               <li>
@@ -317,9 +487,6 @@
                 <input type="tel" name="Telefon" autocomplete="tel" required>
               </label>
             </div>
-            <label>E-mail
-              <input type="email" name="Email" autocomplete="email" required>
-            </label>
             <label>Usluga
               <select name="Usluga" required>
                 <option value="" selected disabled>Odaberite uslugu</option>
@@ -345,7 +512,7 @@
     <div class="container footer__grid">
       <div>
         <a class="logo" href="#pocetna">
-          <img class="logo__mark" src="images/logo.svg" alt="">
+          <img class="logo__mark" src="images/detailing/logo.jpg" alt="">
           <span class="logo__name">
             <span>Driver's</span>
             <span>Detailing</span>
