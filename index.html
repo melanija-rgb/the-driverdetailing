@@ -82,7 +82,7 @@
         <h1>Vaš automobil.<br>Naša preciznost<span>.</span></h1>
         <p class="hero__lead">Profesionalno auto poliranje, detailing i zaštita vozila.</p>
         <div class="hero__actions">
-          <a class="btn btn--primary" href="#kontakt">Zakaži termin</a>
+          <a class="btn btn--primary js-booking" href="#kontakt">Zakaži termin</a>
           <a class="btn btn--ghost" href="#radovi">Pogledaj radove</a>
         </div>
       </div>
@@ -399,7 +399,7 @@
       <div class="cta__content reveal">
         <h2 id="cta-naslov">Vaš automobil zaslužuje više od običnog pranja.</h2>
         <p>Zakažite termin i prepustite njegu svog vozila profesionalcima.</p>
-        <a class="btn btn--primary" href="#kontakt">Zakaži termin</a>
+        <a class="btn btn--primary js-booking" href="#kontakt">Zakaži termin</a>
       </div>
     </section>
 
@@ -456,6 +456,8 @@
             <p class="map-link"><a href="https://www.google.com/maps/search/?api=1&query=Rade%20Radi%C4%87a%20210A%20Banja%20Luka" target="_blank" rel="noopener noreferrer">Otvori lokaciju na mapi</a></p>
           </div>
 
+          <div class="booking" id="zakazi">
+          <h2 class="booking__title">Zakaži termin</h2>
           <form class="form reveal" name="upit" method="POST" action="/hvala.html" data-netlify="true" netlify-honeypot="bot-field">
             <input type="hidden" name="form-name" value="upit">
             <p class="hp">
@@ -485,6 +487,7 @@
             <button class="btn btn--primary" type="submit">Pošalji upit</button>
             <p class="form__note" role="status"></p>
           </form>
+          </div>
         </div>
       </div>
     </section>
@@ -517,8 +520,13 @@
 
   <div class="mobile-bar">
     <a class="btn btn--ghost" href="tel:+38766281073">Pozovi</a>
-    <a class="btn btn--primary" href="#kontakt">Zakaži termin</a>
+    <a class="btn btn--primary js-booking" href="#kontakt">Zakaži termin</a>
   </div>
+
+  <a class="to-top" href="#pocetna">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 14l6-6 6 6"/></svg>
+    <span class="visually-hidden">Nazad na vrh</span>
+  </a>
 
   <dialog class="lightbox" aria-label="Fotografija">
     <button class="lightbox__close" type="button">Zatvori</button>

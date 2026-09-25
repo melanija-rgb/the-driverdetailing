@@ -971,6 +971,10 @@ body:has(.lightbox[open]) .mobile-bar {
   gap: 40px;
 }
 
+.booking__title {
+  display: none;
+}
+
 .contact-list {
   display: grid;
   gap: 18px;
@@ -1320,6 +1324,51 @@ body:has(.lightbox[open]) .mobile-bar {
   display: none;
 }
 
+.to-top {
+  position: fixed;
+  right: 20px;
+  bottom: 24px;
+  z-index: 33;
+  width: 44px;
+  height: 44px;
+  display: grid;
+  place-items: center;
+  border: 1px solid var(--line);
+  background: #0b0b0b;
+  color: #fff;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+}
+
+.to-top.is-visible {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.to-top:hover,
+.to-top:focus-visible {
+  border-color: var(--red);
+  color: var(--red);
+}
+
+.to-top svg {
+  width: 18px;
+  height: 18px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.5;
+}
+
+body.nav-open .to-top,
+body:has(.lightbox[open]) .to-top {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
 /* =========================================================
    15. Hvala
    ========================================================= */
@@ -1426,8 +1475,49 @@ body:has(.lightbox[open]) .mobile-bar {
     overflow: hidden;
   }
 
+  .hero {
+    min-height: 0;
+    display: block;
+    padding-top: var(--header-h);
+  }
+
+  .hero__bg {
+    position: relative;
+    inset: auto;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    object-position: center;
+  }
+
   .hero__overlay {
-    background: linear-gradient(180deg, rgba(11, 11, 11, 0.5) 0%, rgba(11, 11, 11, 0.72) 42%, rgba(11, 11, 11, 0.9) 100%);
+    display: none;
+  }
+
+  .hero__content {
+    padding: 28px 0 40px;
+  }
+
+  .hero__scroll {
+    display: none;
+  }
+
+  .booking {
+    margin-top: 36px;
+    padding-top: 28px;
+    border-top: 1px solid var(--line);
+    scroll-margin-top: calc(var(--header-h) + 12px);
+  }
+
+  .booking__title {
+    display: block;
+    margin-bottom: 16px;
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: clamp(1.8rem, 6vw, 2.4rem);
+    letter-spacing: 0.04em;
+    line-height: 1;
+    text-transform: uppercase;
   }
 }
 
@@ -1441,11 +1531,15 @@ body:has(.lightbox[open]) .mobile-bar {
   }
 
   .hero__content {
-    padding-bottom: 128px;
+    padding-bottom: 40px;
   }
 
   .hero__scroll {
     bottom: 92px;
+  }
+
+  .to-top {
+    bottom: calc(84px + env(safe-area-inset-bottom));
   }
 
   .mobile-bar {

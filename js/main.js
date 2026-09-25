@@ -37,8 +37,11 @@ if (toggle && nav) {
   });
 }
 
+const toTop = document.querySelector(".to-top");
+
 function onScroll() {
   if (header) header.classList.toggle("is-scrolled", window.scrollY > 12);
+  if (toTop) toTop.classList.toggle("is-visible", window.scrollY > 480);
 
   const marker = window.scrollY + (header ? header.offsetHeight : 0) + 80;
   let current = sections[0];
@@ -55,6 +58,20 @@ function onScroll() {
 
 onScroll();
 window.addEventListener("scroll", onScroll, { passive: true });
+
+const bookingForm = document.querySelector("#zakazi");
+const narrowScreen = window.matchMedia("(max-width: 900px)");
+
+document.querySelectorAll(".js-booking").forEach((link) => {
+  link.addEventListener("click", (event) => {
+    if (!narrowScreen.matches || !bookingForm) return;
+    event.preventDefault();
+    closeMenu();
+    bookingForm.scrollIntoView({ behavior: "smooth", block: "start" });
+    const field = bookingForm.querySelector('input[name="Ime i prezime"]');
+    if (field) field.focus({ preventScroll: true });
+  });
+});
 
 if ("IntersectionObserver" in window && reveals.length) {
   const observer = new IntersectionObserver(
