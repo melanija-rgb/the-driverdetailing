@@ -729,11 +729,15 @@ ul {
   background: var(--red);
 }
 
+.project__photos,
+.project .ba {
+  margin-top: 16px;
+}
+
 .project__photos {
   display: grid;
   grid-template-columns: 1fr;
   gap: 12px;
-  margin-top: 16px;
 }
 
 .project__photos .gallery__item {
