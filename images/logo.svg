@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Driver's Detailing">
+  <circle cx="32" cy="32" r="30" fill="#0B0B0B"/>
+  <circle cx="32" cy="32" r="28.5" fill="none" stroke="#C6A35A" stroke-width="1.35"/>
+  <path d="M32 18.5c-8.2 0-13.5 5.6-13.5 13.5S23.8 45.5 32 45.5 45.5 39.9 45.5 32 40.2 18.5 32 18.5z" fill="none" stroke="#C6A35A" stroke-width="1.7"/>
+  <path d="M32 18.5v27" fill="none" stroke="#C6A35A" stroke-width="1.7" stroke-linecap="round"/>
+</svg>
