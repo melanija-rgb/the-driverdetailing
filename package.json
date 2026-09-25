@@ -1,0 +1,7 @@
+{
+  "name": "the-driverdetailing",
+  "private": true,
+  "dependencies": {
+    "@netlify/blobs": "^8.2.0"
+  }
+}

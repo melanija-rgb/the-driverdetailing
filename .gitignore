@@ -1,6 +1,8 @@
 tmp/
 .netlify/
 node_modules/
+.env
+deno.lock
 .DS_Store
 Thumbs.db
 

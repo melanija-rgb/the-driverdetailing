@@ -178,11 +178,10 @@ if (form) {
     note.className = "form__note";
 
     try {
-      const body = new URLSearchParams(new FormData(form));
-      const response = await fetch("/", {
+      const response = await fetch("/api/poruke", {
         method: "POST",
-        headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: body.toString(),
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(Object.fromEntries(new FormData(form))),
       });
 
       if (!response.ok) throw new Error("request failed");
@@ -190,6 +189,7 @@ if (form) {
       form.reset();
       note.textContent = "Hvala. Vaš upit je poslat. Javićemo vam se uskoro.";
       note.classList.add("is-ok");
+      note.scrollIntoView({ block: "center" });
     } catch (error) {
       note.textContent = "Poruka nije poslata. Pozovite nas na 066 281-073 ili pokušajte ponovo.";
       note.classList.add("is-error");

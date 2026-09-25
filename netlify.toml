@@ -1,2 +1,32 @@
 [build]
   publish = "."
+
+[functions]
+  directory = "netlify/functions"
+
+[dev]
+  port = 8888
+  publish = "."
+  framework = "#static"
+
+[[redirects]]
+  from = "/api/poruke"
+  to = "/.netlify/functions/poruke"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/api/prijava"
+  to = "/.netlify/functions/prijava"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/admin"
+  to = "/admin.html"
+  status = 200
+
+[[redirects]]
+  from = "/netlify/functions/*"
+  to = "/index.html"
+  status = 404

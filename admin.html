@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Admin | Driver's Detailing</title>
+  <meta name="robots" content="noindex">
+  <meta name="theme-color" content="#0B0B0B">
+  <link rel="icon" href="images/detailing/logo.jpg" type="image/jpeg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Oswald:wght@500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header class="site-header is-scrolled">
+    <a class="logo" href="index.html">
+      <img class="logo__mark" src="images/detailing/logo.jpg" alt="">
+      <span class="logo__name">
+        <span>Driver's</span>
+        <span>Detailing</span>
+      </span>
+    </a>
+    <a class="admin-back" href="index.html">Na sajt</a>
+  </header>
+
+  <main class="admin-main">
+    <form class="form admin-login" id="prijava">
+      <h1>Admin</h1>
+      <p class="admin-lead">Poruke sa forme za zakazivanje.</p>
+      <label>Šifra
+        <input type="password" name="sifra" autocomplete="current-password" required>
+      </label>
+      <button class="btn btn--primary" type="submit">Prijavi se</button>
+      <p class="form__note" role="status"></p>
+    </form>
+
+    <section class="admin-inbox" id="inbox" hidden>
+      <div class="admin-top">
+        <h1>Poruke</h1>
+        <button class="btn btn--ghost" type="button" id="odjava">Odjavi se</button>
+      </div>
+      <p class="admin-empty" id="prazno" hidden>Još nema poruka.</p>
+      <div class="admin-list" id="lista"></div>
+    </section>
+  </main>
+
+  <script src="js/admin.js" defer></script>
+</body>
+</html>
