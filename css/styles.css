@@ -4,9 +4,9 @@
    ========================================================= */
 
 :root {
-  --bg: #0b0b0b;
-  --bg-raised: #121212;
-  --bg-card: #161616;
+  --bg: #2a2a2a;
+  --bg-raised: #323232;
+  --bg-card: #3a3a3a;
   --text: #f4f4f4;
   --text-soft: #a7a7a7;
   --metal: #9a9da1;
@@ -220,13 +220,13 @@ ul {
   justify-content: space-between;
   gap: 20px;
   padding: 0 28px;
-  background: rgba(11, 11, 11, 0.94);
+  background: rgba(42, 42, 42, 0.94);
   border-bottom: 1px solid transparent;
   transition: background 0.3s ease, border-color 0.3s ease;
 }
 
 .site-header.is-scrolled {
-  background: rgba(11, 11, 11, 0.96);
+  background: rgba(42, 42, 42, 0.96);
   border-bottom-color: var(--line);
 }
 
@@ -703,6 +703,10 @@ ul {
   margin-top: 12px;
   max-width: 72ch;
   color: var(--text-soft);
+}
+
+.project__text--short {
+  display: none;
 }
 
 .project__note {
@@ -1334,7 +1338,7 @@ body:has(.lightbox[open]) .mobile-bar {
   display: grid;
   place-items: center;
   border: 1px solid var(--line);
-  background: #0b0b0b;
+  background: var(--bg);
   color: #fff;
   opacity: 0;
   visibility: hidden;
@@ -1448,7 +1452,7 @@ body:has(.lightbox[open]) .to-top {
     justify-content: flex-start;
     gap: 6px;
     padding: 36px 32px 120px;
-    background: rgba(11, 11, 11, 0.98);
+    background: rgba(42, 42, 42, 0.98);
     opacity: 0;
     visibility: hidden;
     transform: translateY(8px);
@@ -1467,39 +1471,62 @@ body:has(.lightbox[open]) .to-top {
     color: #fff;
   }
 
-  .nav {
-    background: #0b0b0b;
-  }
-
   body.nav-open {
     overflow: hidden;
   }
 
-  .hero {
-    min-height: 0;
-    display: block;
-    padding-top: var(--header-h);
+  body,
+  .site-header,
+  .site-header.is-scrolled,
+  .nav,
+  .mobile-bar,
+  .to-top {
+    background: #212121;
   }
 
   .hero__bg {
-    position: relative;
-    inset: auto;
+    inset: auto 0 16% 0;
     width: 100%;
-    height: auto;
-    object-fit: contain;
-    object-position: center;
+    height: 54%;
+    object-fit: cover;
+    object-position: center center;
+  }
+
+  :root {
+    --text: #d5d5d5;
+    --red: #9e1b22;
+    --red-dark: #7c151b;
+  }
+
+  .hero__lead {
+    color: #c4c4c4;
+  }
+
+  .hero__actions .btn--primary {
+    background: #7a1419;
+    color: #e0e0e0;
+  }
+
+  .hero__actions .btn--primary:hover {
+    background: #641014;
+  }
+
+  .hero__actions .btn--ghost {
+    border-color: rgba(213, 213, 213, 0.32);
+    color: #c4c4c4;
   }
 
   .hero__overlay {
+    background: linear-gradient(180deg, rgba(11, 11, 11, 0.34) 0%, rgba(11, 11, 11, 0.5) 46%, rgba(11, 11, 11, 0.82) 100%);
+  }
+
+  #audi-a3 .project__text:not(.project__text--short),
+  #audi-a3 .project__list {
     display: none;
   }
 
-  .hero__content {
-    padding: 28px 0 40px;
-  }
-
-  .hero__scroll {
-    display: none;
+  #audi-a3 .project__text--short {
+    display: block;
   }
 
   .booking {
@@ -1522,6 +1549,14 @@ body:has(.lightbox[open]) .to-top {
 }
 
 @media (max-width: 700px) {
+  .hero__bg {
+    inset: auto 0 34% 0;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    object-position: center center;
+  }
+
   .hero__actions {
     flex-direction: column;
   }
@@ -1531,7 +1566,7 @@ body:has(.lightbox[open]) .to-top {
   }
 
   .hero__content {
-    padding-bottom: 40px;
+    padding-bottom: 128px;
   }
 
   .hero__scroll {
@@ -1552,7 +1587,7 @@ body:has(.lightbox[open]) .to-top {
     grid-template-columns: 0.85fr 1.25fr;
     gap: 8px;
     padding: 10px 12px calc(10px + env(safe-area-inset-bottom));
-    background: rgba(11, 11, 11, 0.96);
+    background: #212121;
     border-top: 1px solid var(--line);
     backdrop-filter: blur(14px);
   }
