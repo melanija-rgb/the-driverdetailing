@@ -4,7 +4,7 @@
    ========================================================= */
 
 :root {
-  --bg: #2a2a2a;
+  --bg: #222222;
   --bg-raised: #323232;
   --bg-card: #3a3a3a;
   --text: #f4f4f4;
@@ -220,13 +220,13 @@ ul {
   justify-content: space-between;
   gap: 20px;
   padding: 0 28px;
-  background: rgba(42, 42, 42, 0.94);
+  background: rgba(34, 34, 34, 0.94);
   border-bottom: 1px solid transparent;
   transition: background 0.3s ease, border-color 0.3s ease;
 }
 
 .site-header.is-scrolled {
-  background: rgba(42, 42, 42, 0.96);
+  background: rgba(34, 34, 34, 0.96);
   border-bottom-color: var(--line);
 }
 
@@ -1452,7 +1452,7 @@ body:has(.lightbox[open]) .to-top {
     justify-content: flex-start;
     gap: 6px;
     padding: 36px 32px 120px;
-    background: rgba(42, 42, 42, 0.98);
+    background: rgba(34, 34, 34, 0.98);
     opacity: 0;
     visibility: hidden;
     transform: translateY(8px);
@@ -1481,7 +1481,7 @@ body:has(.lightbox[open]) .to-top {
   .nav,
   .mobile-bar,
   .to-top {
-    background: #212121;
+    background: #191919;
   }
 
   .hero__bg {
@@ -1517,7 +1517,12 @@ body:has(.lightbox[open]) .to-top {
   }
 
   .hero__overlay {
-    background: linear-gradient(180deg, rgba(11, 11, 11, 0.34) 0%, rgba(11, 11, 11, 0.5) 46%, rgba(11, 11, 11, 0.82) 100%);
+    inset: auto 0 16% 0;
+    width: 100%;
+    height: 54%;
+    background:
+      linear-gradient(90deg, rgba(11, 11, 11, 0.9) 0%, rgba(11, 11, 11, 0.62) 46%, rgba(11, 11, 11, 0.28) 100%),
+      linear-gradient(180deg, rgba(11, 11, 11, 0.35) 0%, rgba(11, 11, 11, 0.1) 36%, rgba(11, 11, 11, 0.78) 100%);
   }
 
   #audi-a3 .project__text:not(.project__text--short),
@@ -1549,12 +1554,21 @@ body:has(.lightbox[open]) .to-top {
 }
 
 @media (max-width: 700px) {
-  .hero__bg {
+  .hero__bg,
+  .hero__overlay {
     inset: auto 0 34% 0;
     width: 100%;
     height: auto;
+    aspect-ratio: 2000 / 1334;
+  }
+
+  .hero__bg {
     object-fit: contain;
     object-position: center center;
+  }
+
+  .hero__actions .btn--primary {
+    display: none;
   }
 
   .hero__actions {
@@ -1587,7 +1601,7 @@ body:has(.lightbox[open]) .to-top {
     grid-template-columns: 0.85fr 1.25fr;
     gap: 8px;
     padding: 10px 12px calc(10px + env(safe-area-inset-bottom));
-    background: #212121;
+    background: #191919;
     border-top: 1px solid var(--line);
     backdrop-filter: blur(14px);
   }
@@ -1645,6 +1659,19 @@ body:has(.lightbox[open]) .to-top {
 }
 
 @media (min-width: 901px) {
+  body,
+  .to-top {
+    background: #1a1a1a;
+  }
+
+  .site-header {
+    background: rgba(26, 26, 26, 0.94);
+  }
+
+  .site-header.is-scrolled {
+    background: rgba(26, 26, 26, 0.96);
+  }
+
   .ba {
     grid-template-columns: 1fr auto 1fr;
     gap: 18px;
